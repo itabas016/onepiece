@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F5369FBA-01A3-4CAB-AA4C-AFD454B617A8}</ProjectGuid>
+    <ProjectGuid>{4DFAB0CE-A34D-4BC8-98E3-4BBAD2CE48CD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OnePiece.Framework.RedisMapper</RootNamespace>
-    <AssemblyName>OnePiece.Framework.RedisMapper</AssemblyName>
+    <RootNamespace>OnePiece.Framework.SubSonic</RootNamespace>
+    <AssemblyName>OnePiece.Framework.SubSonic.Extension</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +20,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,26 +28,13 @@
     <DefineConstants>TRACE;RELEASE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="ServiceStack.Common">
-      <HintPath>..\packages\ServiceStack.Common.3.9.11\lib\net35\ServiceStack.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="ServiceStack.Interfaces">
-      <HintPath>..\packages\ServiceStack.Common.3.9.11\lib\net35\ServiceStack.Interfaces.dll</HintPath>
-    </Reference>
-    <Reference Include="ServiceStack.Redis">
-      <HintPath>..\packages\ServiceStack.Redis.3.9.71\lib\net35\ServiceStack.Redis.dll</HintPath>
-    </Reference>
-    <Reference Include="ServiceStack.Text">
-      <HintPath>..\packages\ServiceStack.Text.4.0.30\lib\net40\ServiceStack.Text.dll</HintPath>
+    <Reference Include="SubSonic.Core">
+      <HintPath>..\packages\SubSonic.3.0.0.4\lib\SubSonic.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -58,30 +43,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attributes\QueryOrSortFieldAttribute.cs" />
-    <Compile Include="Services\MasterOnlyRedisService.cs" />
-    <Compile Include="Model\IRedisCustomProperty.cs" />
-    <Compile Include="Model\IRedisModel.cs" />
-    <Compile Include="Model\IRedisModelBase.cs" />
-    <Compile Include="Model\IRedisModelWithSubModel.cs" />
+    <Compile Include="Operation\CommentAssistant.cs" />
+    <Compile Include="Extensions\DbContextExtension.cs" />
+    <Compile Include="Operation\DbContextFactory.cs" />
+    <Compile Include="Entity\DbType.cs" />
+    <Compile Include="Entity\EntityBase.cs" />
+    <Compile Include="Entity\EntityStatus.cs" />
+    <Compile Include="Interface\IDbCacheContext.cs" />
+    <Compile Include="Interface\IDbContext.cs" />
+    <Compile Include="Operation\IndexAssistant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RedisClientManagerFactory.cs" />
-    <Compile Include="RedisConfigKeys.cs" />
-    <Compile Include="RedisKeyFactory.cs" />
-    <Compile Include="Services\RedisService.cs" />
-    <Compile Include="RedisServiceExtensions.cs" />
-    <Compile Include="Services\IMasterOnlyRedisService.cs" />
-    <Compile Include="Services\IRedisService.cs" />
+    <Compile Include="Entity\SqlContextConnection.cs" />
+    <Compile Include="Operation\SqlQuery.cs" />
+    <Compile Include="Entity\SubSonicColumnComment.cs" />
+    <Compile Include="Attribute\SubSonicDatabaseAttribute.cs" />
+    <Compile Include="Attribute\SubSonicIndexAttribute.cs" />
+    <Compile Include="Entity\SubSonicIndexItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OnePiece.Framework.Core\OnePiece.Framework.Core.csproj">
       <Project>{19a37ab1-1174-47b0-ab31-b7d062052293}</Project>
       <Name>OnePiece.Framework.Core</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
