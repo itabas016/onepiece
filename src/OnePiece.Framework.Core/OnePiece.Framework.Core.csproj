@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{19A37AB1-1174-47B0-AB31-B7D062052293}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnePiece.Framework.Core</RootNamespace>
+    <AssemblyName>OnePiece.Framework.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\build\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\build\bin\Release\</OutputPath>
+    <DefineConstants>TRACE;RELEASE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Live|AnyCPU'">
+    <OutputPath>..\..\build\bin\Live\</OutputPath>
+    <DefineConstants>TRACE;LIVE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Compile\ProjectConfigHelper.cs" />
+    <Compile Include="Compile\RegistryMode.cs" />
+    <Compile Include="Compile\RegistryModeFactory.cs" />
+    <Compile Include="Configs\ConfigurableSet.cs" />
+    <Compile Include="Configs\GlobalConfigAttribute.cs" />
+    <Compile Include="Configs\GlobalConfigRepository.cs" />
+    <Compile Include="Configs\IGlobalConfigItem.cs" />
+    <Compile Include="Configs\IGlobalConfigService.cs" />
+    <Compile Include="Consts\ASCII.cs" />
+    <Compile Include="Consts\DateTimeFormat.cs" />
+    <Compile Include="Consts\EncodingNames.cs" />
+    <Compile Include="Data\DataSetExtension.cs" />
+    <Compile Include="Data\SqlColumnAttribute.cs" />
+    <Compile Include="Data\SqlTableAttribute.cs" />
+    <Compile Include="Data\TypeSwitch.cs" />
+    <Compile Include="EnumRepository.cs" />
+    <Compile Include="Extensions\CombinatoricsUtilities.cs" />
+    <Compile Include="Extensions\DateExtensions.cs" />
+    <Compile Include="Extensions\DoubleExtensions.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Extensions\FileTypeExtensions.cs" />
+    <Compile Include="Extensions\Int32Extensions.cs" />
+    <Compile Include="Extensions\MathExtensions.cs" />
+    <Compile Include="Extensions\MD5TransformExtension.cs" />
+    <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Extensions\PredicateBuilder.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\TimeSpanExtensions.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Helper\HttpHelper.cs" />
+    <Compile Include="Helper\LambdaComparer.cs" />
+    <Compile Include="Helper\MambaEnumHelper.cs" />
+    <Compile Include="Helper\ReflectionHelper.cs" />
+    <Compile Include="Helper\RegexHelper.cs" />
+    <Compile Include="Helper\StringHelper.cs" />
+    <Compile Include="ILogService.cs" />
+    <Compile Include="Ioc\IocContainer.cs" />
+    <Compile Include="Ioc\IocFacotry.cs" />
+    <Compile Include="IRequestRepository.cs" />
+    <Compile Include="ParameterErrorException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultCode.cs" />
+    <Compile Include="Security\ISignature.cs" />
+    <Compile Include="Security\IUrlSignature.cs" />
+    <Compile Include="Security\MD5Signature.cs" />
+    <Compile Include="Security\SHA1Signature.cs" />
+    <Compile Include="Security\SignatureContext.cs" />
+    <Compile Include="Security\SignatureFactory.cs" />
+    <Compile Include="Security\SignatureMethod.cs" />
+    <Compile Include="Security\SignatureRepository.cs" />
+    <Compile Include="Security\UrlSignature.cs" />
+    <Compile Include="SingletonBase.cs" />
+    <Compile Include="Storages\Connection.cs" />
+    <Compile Include="Storages\ContextConnectionFactory.cs" />
+    <Compile Include="Storages\IContextConnection.cs" />
+    <Compile Include="Storages\IServiceLocator.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
