@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F405D62-B2C4-4055-B8A4-7DF5E210C219}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnePiece.Framework.Tests</RootNamespace>
+    <AssemblyName>OnePiece.Framework.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1408.0717\lib\net40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xunit">
+      <HintPath>..\packages\xunit.1.9.2\lib\net20\xunit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\DebugFactAttribute.cs" />
+    <Compile Include="Attributes\RedisFactAttribute.cs" />
+    <Compile Include="Core\Data\DataSetToModelTest.cs" />
+    <Compile Include="Core\Extensions\DateExtensionTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OnePiece.Framework.Cache\OnePiece.Framework.Cache.csproj">
+      <Project>{e7c5b766-3417-4fc4-9692-92d21eee73c2}</Project>
+      <Name>OnePiece.Framework.Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnePiece.Framework.Core\OnePiece.Framework.Core.csproj">
+      <Project>{19a37ab1-1174-47b0-ab31-b7d062052293}</Project>
+      <Name>OnePiece.Framework.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnePiece.Framework.Log\OnePiece.Framework.Log.csproj">
+      <Project>{d64c84ec-f840-4c59-89be-06268453109a}</Project>
+      <Name>OnePiece.Framework.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnePiece.Framework.RedisMapper\OnePiece.Framework.RedisMapper.csproj">
+      <Project>{f5369fba-01a3-4cab-aa4c-afd454b617a8}</Project>
+      <Name>OnePiece.Framework.RedisMapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnePiece.Framework.Web\OnePiece.Framework.Web.csproj">
+      <Project>{ca3fb40a-32d6-4ad1-9d49-1c579a61110a}</Project>
+      <Name>OnePiece.Framework.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\Helper\" />
+    <Folder Include="Core\Security\" />
+    <Folder Include="Core\Storages\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
