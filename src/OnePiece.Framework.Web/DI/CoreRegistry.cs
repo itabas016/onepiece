@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OnePiece.Framework.RedisMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,8 +12,8 @@ namespace OnePiece.Framework.Core
         public override void Register()
         {
             For<IRequestRepository>().Use<RequestRepository>();
-            //For<IRandomService>().Use<RandomService>();
-            //For<IRedisService>().Use<RedisService>();
+            For<IRandomService>().Use<RandomService>();
+            For<IRedisService>().Use<RedisService>();
         }
     }
 }
