@@ -14,6 +14,7 @@ namespace OnePiece.Framework.Core
             For<IRequestRepository>().Use<RequestRepository>();
             For<IRandomService>().Use<RandomService>();
             For<IRedisService>().Use<RedisService>();
+            For<ICookieService>().Use<CookieService>();
         }
     }
 }

@@ -94,6 +94,7 @@
     <Compile Include="ParameterErrorException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResultCode.cs" />
+    <Compile Include="RetrieveValueWithDefaultHelper.cs" />
     <Compile Include="Security\ISignature.cs" />
     <Compile Include="Security\IUrlSignature.cs" />
     <Compile Include="Security\MD5Signature.cs" />
