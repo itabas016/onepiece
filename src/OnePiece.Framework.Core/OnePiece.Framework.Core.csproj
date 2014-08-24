@@ -86,7 +86,6 @@
     <Compile Include="Helper\ReflectionHelper.cs" />
     <Compile Include="Helper\RegexHelper.cs" />
     <Compile Include="Helper\StringHelper.cs" />
-    <Compile Include="ILogService.cs" />
     <Compile Include="Ioc\IocContainer.cs" />
     <Compile Include="Ioc\IocFacotry.cs" />
     <Compile Include="IRequestRepository.cs" />

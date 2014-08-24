@@ -90,6 +90,10 @@
       <Project>{19a37ab1-1174-47b0-ab31-b7d062052293}</Project>
       <Name>OnePiece.Framework.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OnePiece.Framework.Log\OnePiece.Framework.Log.csproj">
+      <Project>{d64c84ec-f840-4c59-89be-06268453109a}</Project>
+      <Name>OnePiece.Framework.Log</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OnePiece.Framework.RedisMapper\OnePiece.Framework.RedisMapper.csproj">
       <Project>{f5369fba-01a3-4cab-aa4c-afd454b617a8}</Project>
       <Name>OnePiece.Framework.RedisMapper</Name>
