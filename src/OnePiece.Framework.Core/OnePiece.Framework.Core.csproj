@@ -68,6 +68,7 @@
     <Compile Include="Data\TypeSwitch.cs" />
     <Compile Include="EnumRepository.cs" />
     <Compile Include="Extensions\CombinatoricsUtilities.cs" />
+    <Compile Include="Extensions\CommonExtensions.cs" />
     <Compile Include="Extensions\DateExtensions.cs" />
     <Compile Include="Extensions\DoubleExtensions.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\TimeSpanExtensions.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Helper\AuthHelper.cs" />
     <Compile Include="Helper\HttpHelper.cs" />
     <Compile Include="Helper\LambdaComparer.cs" />
     <Compile Include="Helper\ReflectionHelper.cs" />

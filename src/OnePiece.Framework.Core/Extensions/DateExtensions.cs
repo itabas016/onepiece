@@ -44,5 +44,21 @@ namespace OnePiece.Framework.Core
 
             return number;
         }
+
+        public static long UnixStamp(this DateTime time)
+        {
+            double intResult = 0;
+            System.DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1));
+            intResult = (time - startTime).TotalSeconds;
+            return (long)intResult;
+        }
+
+        public static DateTime UTCStamp(this long timeStamp)
+        {
+            System.DateTime time = System.DateTime.MinValue;
+            System.DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1));
+            time = startTime.AddSeconds(timeStamp);
+            return time;
+        }
     }
 }

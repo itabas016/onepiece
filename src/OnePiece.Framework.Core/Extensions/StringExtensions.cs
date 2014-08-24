@@ -94,6 +94,20 @@ namespace OnePiece.Framework.Core
             return ret;
         }
 
+        public static long TruncLong(this string input)
+        {
+            long result = 0;
+            if (!string.IsNullOrEmpty(input))
+            {
+                input = Regex.Replace(input, @"[^\d]", "");
+                if (Regex.IsMatch(input, @"^[+-]?\d*$"))
+                {
+                    result = Int64.Parse(input);
+                }
+            }
+            return result;
+        }
+
         public static double ToDouble(this string doubleStr)
         {
             double val = 0.0;
@@ -221,6 +235,13 @@ namespace OnePiece.Framework.Core
             return string.IsNullOrEmpty(value);
         }
 
+        public static string DefaultValue(this string str)
+        {
+            var value = str.IsNullOrEmpty() ? string.Empty : str;
+
+            return value;
+        }
+
         public static string FormatWith(this string pattern, params object[] args)
         {
             return string.Format(pattern, args);
@@ -287,7 +308,6 @@ namespace OnePiece.Framework.Core
                 return val;
             }
         }
-
 
         public static bool IsEmail(this string emailStr)
         {
@@ -396,6 +416,20 @@ namespace OnePiece.Framework.Core
             var regex = new Regex(pattern);
 
             return regex.Replace(content, replacement);
+        }
+
+        public static bool VerifyMd5Hash(this string input, string hash)
+        {
+            string hashOfInput = Md5Hash(input);
+            StringComparer comparer = StringComparer.OrdinalIgnoreCase;
+            if (0 == comparer.Compare(hashOfInput, hash))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
