@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace OnePiece.Framework.Core
 {
-    class EnumHelper
+    public interface IEntityMapper
     {
+        void Config();
     }
 }

@@ -83,7 +83,6 @@
     <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="Helper\HttpHelper.cs" />
     <Compile Include="Helper\LambdaComparer.cs" />
-    <Compile Include="Helper\MambaEnumHelper.cs" />
     <Compile Include="Helper\ReflectionHelper.cs" />
     <Compile Include="Helper\RegexHelper.cs" />
     <Compile Include="Helper\StringHelper.cs" />
