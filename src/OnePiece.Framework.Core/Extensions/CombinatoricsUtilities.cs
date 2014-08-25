@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnePiece.Framework.Core.Extensions
+namespace OnePiece.Framework.Core
 {
     // Copyright (c) 2010 Alex Regueiro
     // Licensed under MIT license, available at <http://www.opensource.org/licenses/mit-license.php>.

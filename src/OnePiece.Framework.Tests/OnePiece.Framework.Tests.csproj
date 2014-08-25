@@ -50,6 +50,7 @@
     <Compile Include="Attributes\DebugFactAttribute.cs" />
     <Compile Include="Attributes\RedisFactAttribute.cs" />
     <Compile Include="Core\Data\DataSetToModelTest.cs" />
+    <Compile Include="Core\Extensions\CombinatoricsUtilitiesTest.cs" />
     <Compile Include="Core\Extensions\DateExtensionTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
