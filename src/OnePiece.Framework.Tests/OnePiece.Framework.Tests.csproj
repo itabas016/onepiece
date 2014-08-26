@@ -51,7 +51,9 @@
     <Compile Include="Attributes\RedisFactAttribute.cs" />
     <Compile Include="Core\Data\DataSetToModelTest.cs" />
     <Compile Include="Core\Extensions\CombinatoricsUtilitiesTest.cs" />
+    <Compile Include="Core\Extensions\CommonExtensionsTest.cs" />
     <Compile Include="Core\Extensions\DateExtensionTest.cs" />
+    <Compile Include="Core\Extensions\EnumerableExtensionsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
