@@ -56,8 +56,10 @@
     <Compile Include="Core\Extensions\EnumerableExtensionsTest.cs" />
     <Compile Include="Core\Extensions\EnumExtensionsTest.cs" />
     <Compile Include="Core\Extensions\Int32ExtensionsTest.cs" />
+    <Compile Include="Core\Extensions\ObjectExtensionsTest.cs" />
     <Compile Include="Core\Extensions\PredicateBuilderTest.cs" />
     <Compile Include="Core\Extensions\StringExtensionsTest.cs" />
+    <Compile Include="Core\Extensions\TypeExtensionsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
