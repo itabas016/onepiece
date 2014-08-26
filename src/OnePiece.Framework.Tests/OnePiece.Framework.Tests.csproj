@@ -60,6 +60,10 @@
     <Compile Include="Core\Extensions\PredicateBuilderTest.cs" />
     <Compile Include="Core\Extensions\StringExtensionsTest.cs" />
     <Compile Include="Core\Extensions\TypeExtensionsTest.cs" />
+    <Compile Include="Core\Helper\AuthHelperTest.cs" />
+    <Compile Include="Core\Helper\LambdaComparerTest.cs" />
+    <Compile Include="Core\Helper\ReflectionHelperTest.cs" />
+    <Compile Include="Core\Helper\RegexHelperTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -89,7 +93,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Core\Helper\" />
     <Folder Include="Core\Security\" />
     <Folder Include="Core\Storages\" />
   </ItemGroup>
