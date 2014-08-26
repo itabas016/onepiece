@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Attributes\DebugFactAttribute.cs" />
     <Compile Include="Attributes\RedisFactAttribute.cs" />
+    <Compile Include="Compile\RegistryModeFactoryTests.cs" />
     <Compile Include="Core\Data\DataSetToModelTest.cs" />
     <Compile Include="Core\Extensions\CombinatoricsUtilitiesTest.cs" />
     <Compile Include="Core\Extensions\CommonExtensionsTest.cs" />
@@ -64,6 +65,10 @@
     <Compile Include="Core\Helper\LambdaComparerTest.cs" />
     <Compile Include="Core\Helper\ReflectionHelperTest.cs" />
     <Compile Include="Core\Helper\RegexHelperTest.cs" />
+    <Compile Include="Core\Security\MD5SignatureTest.cs" />
+    <Compile Include="Core\Security\SHA1SignatureTest.cs" />
+    <Compile Include="Core\Security\SignatureContextTest.cs" />
+    <Compile Include="Core\Security\UrlSignatureTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -93,7 +98,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Core\Security\" />
     <Folder Include="Core\Storages\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
