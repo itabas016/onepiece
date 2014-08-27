@@ -36,7 +36,6 @@ namespace OnePiece.Framework.Tests.Core.Security
             [Fact]
             public void should_return_default_if_not_defined()
             {
-                /*
                 var nvs = new NameValueCollection();
                 nvs[SignatureContext.KEY_SIGN_TYPE] = "3333";
 
@@ -51,7 +50,6 @@ namespace OnePiece.Framework.Tests.Core.Security
                 // empty
                 nvs[SignatureContext.KEY_SIGN_TYPE] = "";
                 Assert.Equal(SignatureMethod.MD5, SignatureContext.GetSignatureMethod(nvs));
-                */
             }
         }
 
