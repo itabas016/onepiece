@@ -34,3 +34,4 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: InternalsVisibleTo("OnePiece.Framework.Tests,PublicKey=0024000004800000940000000602000000240000525341310004000001000100493bbbb5d1c38628736f2199fb412604db888d24489c56b14952134492f92f77f56e1523d4a75e6eead36a68f1ee4a9de73cc4e91e3918547f5bb156e18c9a49c69ae2533d2012fd2cc5d8f83ace8266f149ff619cd61e6d737f8fc7989bd273792705bc76a748f6429ac24cb28c4f6ed28ac63319bfea0724a51457f86f22ad")]

@@ -1,0 +1,6 @@
+OnePiece.Framework.Core
+OnePiece.Framework.RedisMapper
+OnePiece.Framework.Log
+OnePiece.Framework.Cache
+SubSonic.Core.Oracle
+SubSonic.Core.Oracle.Test

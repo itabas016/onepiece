@@ -29,6 +29,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\common\core.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="SubSonic.Core">
       <HintPath>..\packages\SubSonic.3.0.0.4\lib\SubSonic.Core.dll</HintPath>
@@ -61,6 +67,9 @@
     <Compile Include="Entity\SubSonicIndexItem.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\common\core.snk">
+      <Link>core.snk</Link>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
