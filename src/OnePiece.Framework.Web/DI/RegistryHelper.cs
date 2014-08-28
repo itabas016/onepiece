@@ -1,4 +1,4 @@
-﻿using OnePiece.Framework.Cache;
+﻿using OnePiece.Framework.Caching;
 using OnePiece.Framework.Core;
 using Snap;
 using Snap.StructureMap;

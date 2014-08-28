@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnePiece.Framework.Cache
+namespace OnePiece.Framework.Caching
 {
     /// <summary>
     /// For entity model, if you want to use SNAP,

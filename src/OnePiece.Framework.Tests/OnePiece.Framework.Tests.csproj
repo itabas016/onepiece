@@ -80,9 +80,9 @@
     <Compile Include="Web\RandomServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OnePiece.Framework.Cache\OnePiece.Framework.Cache.csproj">
+    <ProjectReference Include="..\OnePiece.Framework.Caching\OnePiece.Framework.Caching.csproj">
       <Project>{e7c5b766-3417-4fc4-9692-92d21eee73c2}</Project>
-      <Name>OnePiece.Framework.Cache</Name>
+      <Name>OnePiece.Framework.Caching</Name>
     </ProjectReference>
     <ProjectReference Include="..\OnePiece.Framework.Core\OnePiece.Framework.Core.csproj">
       <Project>{19a37ab1-1174-47b0-ab31-b7d062052293}</Project>

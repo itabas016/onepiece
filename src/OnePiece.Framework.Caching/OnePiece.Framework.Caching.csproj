@@ -7,8 +7,8 @@
     <ProjectGuid>{E7C5B766-3417-4FC4-9692-92D21EEE73C2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OnePiece.Framework.Cache</RootNamespace>
-    <AssemblyName>OnePiece.Framework.Cache</AssemblyName>
+    <RootNamespace>OnePiece.Framework.Caching</RootNamespace>
+    <AssemblyName>OnePiece.Framework.Caching</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

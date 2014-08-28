@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnePiece.Framework.Cache
+namespace OnePiece.Framework.Caching
 {
     public class ServiceCacheInterceptor : MethodInterceptor
     {

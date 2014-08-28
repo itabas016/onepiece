@@ -6,7 +6,7 @@ using System.Runtime.Caching;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnePiece.Framework.Cache
+namespace OnePiece.Framework.Caching
 {
     /// <summary>
     /// Currently, Asp.Net.MemoryCache is used as the cache intermediary; 
