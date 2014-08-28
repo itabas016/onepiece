@@ -1,5 +1,5 @@
 ﻿using OnePiece.Framework.Core;
-using OnePiece.Framework.Log;
+using OnePiece.Framework.Logging;
 using OnePiece.Framework.RedisMapper;
 using ServiceStack.Redis;
 using StructureMap;
