@@ -38,8 +38,9 @@
     <AssemblyOriginatorKeyFile>..\common\core.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SubSonic.Core">
-      <HintPath>..\..\..\..\..\framework\lib\Subsonic\SubSonic.Core.dll</HintPath>
+    <Reference Include="SubSonic.Core, Version=3.0.0.3, Culture=neutral, PublicKeyToken=2f6b00d3b7b79d4c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Subsonic\SubSonic.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
