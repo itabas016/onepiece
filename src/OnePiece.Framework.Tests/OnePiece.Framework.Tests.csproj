@@ -41,6 +41,9 @@
     <Reference Include="Moq">
       <HintPath>..\packages\Moq.4.2.1408.0717\lib\net40\Moq.dll</HintPath>
     </Reference>
+    <Reference Include="SubSonic.Core">
+      <HintPath>..\..\lib\Subsonic\SubSonic.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -78,6 +81,8 @@
     <Compile Include="Core\Security\SHA1SignatureTest.cs" />
     <Compile Include="Core\Security\SignatureContextTest.cs" />
     <Compile Include="Core\Security\UrlSignatureTest.cs" />
+    <Compile Include="Core\SubSonic\SubSonicAssistantTest.cs" />
+    <Compile Include="Core\SubSonic\SubSonicModelTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Web\RandomServiceTest.cs" />
   </ItemGroup>
@@ -97,6 +102,10 @@
     <ProjectReference Include="..\OnePiece.Framework.RedisMapper\OnePiece.Framework.RedisMapper.csproj">
       <Project>{f5369fba-01a3-4cab-aa4c-afd454b617a8}</Project>
       <Name>OnePiece.Framework.RedisMapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnePiece.Framework.SubSonic.Extension\OnePiece.Framework.SubSonic.Extension.csproj">
+      <Project>{4dfab0ce-a34d-4bc8-98e3-4bbad2ce48cd}</Project>
+      <Name>OnePiece.Framework.SubSonic.Extension</Name>
     </ProjectReference>
     <ProjectReference Include="..\OnePiece.Framework.Web\OnePiece.Framework.Web.csproj">
       <Project>{ca3fb40a-32d6-4ad1-9d49-1c579a61110a}</Project>
