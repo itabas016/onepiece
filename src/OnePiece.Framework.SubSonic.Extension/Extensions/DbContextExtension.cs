@@ -13,8 +13,7 @@ namespace OnePiece.Framework.SubSonic
 {
     public static class DbContextExtension
     {
-        public static IQueryable<T> All<T>(this IDbContext dbContext)
-            where T : EntityBase, new()
+        public static IQueryable<T> All<T>(this IDbContext dbContext) where T : EntityBase, new()
         {
             return dbContext.DbContext.All<T>();
         }
@@ -26,14 +25,12 @@ namespace OnePiece.Framework.SubSonic
         /// <param name="dbContext"></param>
         /// <param name="expression"></param>
         /// <returns></returns>
-        public static IQueryable<T> Where<T>(this IDbContext dbContext, Expression<Func<T, bool>> expression)
-            where T : EntityBase, new()
+        public static IQueryable<T> Where<T>(this IDbContext dbContext, Expression<Func<T, bool>> expression) where T : EntityBase, new()
         {
             return dbContext.DbContext.All<T>().Where<T>(expression);
         }
 
-        public static IList<T> Where<T>(this IDbContext dbContext, Expression<Func<T, bool>> dbSearchExpression, Predicate<T> inMemorySearchExpression)
-            where T : EntityBase, new()
+        public static IList<T> Where<T>(this IDbContext dbContext, Expression<Func<T, bool>> dbSearchExpression, Predicate<T> inMemorySearchExpression) where T : EntityBase, new()
         {
             var resultSet = dbContext.DbContext.Find<T>(dbSearchExpression);
             if (resultSet != null)
@@ -180,27 +177,22 @@ namespace OnePiece.Framework.SubSonic
             return dbContext.DbContext.DeleteMany<T>(expression);
         }
 
-        public static bool Exists<T>(this IDbContext context, Expression<Func<T, bool>> expression)
-            where T : EntityBase, new()
+        public static bool Exists<T>(this IDbContext context, Expression<Func<T, bool>> expression) where T : EntityBase, new()
         {
             return context.DbContext.Exists<T>(expression);
         }
 
-
-        public static IList<T> Find<T>(this IDbContext context, Expression<Func<T, bool>> expression)
-            where T : EntityBase, new()
+        public static IList<T> Find<T>(this IDbContext context, Expression<Func<T, bool>> expression) where T : EntityBase, new()
         {
             return context.DbContext.Find<T>(expression);
         }
 
-        public static PagedList<T> GetPaged<T>(this IDbContext context, int pageIndex, int pageSize)
-            where T : EntityBase, new()
+        public static PagedList<T> GetPaged<T>(this IDbContext context, int pageIndex, int pageSize) where T : EntityBase, new()
         {
             return context.DbContext.GetPaged<T>(pageIndex, pageSize);
         }
 
-        public static PagedList<T> GetPaged<T>(this IDbContext context, string sortBy, int pageIndex, int pageSize)
-            where T : EntityBase, new()
+        public static PagedList<T> GetPaged<T>(this IDbContext context, string sortBy, int pageIndex, int pageSize) where T : EntityBase, new()
         {
             return context.DbContext.GetPaged<T>(sortBy, pageIndex, pageSize);
         }
@@ -269,8 +261,7 @@ namespace OnePiece.Framework.SubSonic
             return count;
         }
 
-        public static List<T> Top<T, TOrder>(this IDbContext dbContext, int topCount, Expression<Func<T, bool>> where, bool isDesc, params Expression<Func<T, TOrder>>[] orderByColumnExps)
-            where T : EntityBase, new()
+        public static List<T> Top<T, TOrder>(this IDbContext dbContext, int topCount, Expression<Func<T, bool>> where, bool isDesc, params Expression<Func<T, TOrder>>[] orderByColumnExps) where T : EntityBase, new()
         {
             var result = dbContext.DbContext.All<T>().Where<T>(where);
             if (result != null)
@@ -298,8 +289,7 @@ namespace OnePiece.Framework.SubSonic
             }
         }
 
-        public static T Save<T>(this IDbContext dbContext, Expression<Func<T, bool>> expression, T model)
-            where T : EntityBase, new()
+        public static T Save<T>(this IDbContext dbContext, Expression<Func<T, bool>> expression, T model) where T : EntityBase, new()
         {
             var existed = dbContext.DbContext.Single<T>(expression);
             if (existed == null)
@@ -316,8 +306,7 @@ namespace OnePiece.Framework.SubSonic
             return model;
         }
 
-        public static IList<T> SelectByIds<T>(this IDbContext dbContext, IEnumerable<int> ids, string tblName, string colName, int queryCount = 30)
-            where T : new()
+        public static IList<T> SelectByIds<T>(this IDbContext dbContext, IEnumerable<int> ids, string tblName, string colName, int queryCount = 30) where T : new()
         {
             var ret = new List<T>();
             if (ids != null && ids.Any())
