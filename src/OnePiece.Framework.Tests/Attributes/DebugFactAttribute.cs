@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
+using Xunit.Abstractions;
 using Xunit.Sdk;
 
 namespace OnePiece.Framework.Tests.Attributes
 {
+    [XunitTestCaseDiscoverer("OnePiece.Framework.Tests.XunitExtensions.SkippableFactDiscoverer", "OnePiece.Framework.Tests")]
     public class DebugFactAttribute : FactAttribute
     {
         bool isDebugMode = false;
@@ -19,19 +21,5 @@ namespace OnePiece.Framework.Tests.Attributes
         }
 #endif
 
-        protected override IEnumerable<ITestCommand> EnumerateTestCommands(IMethodInfo method)
-        {
-            var command = default(ITestCommand);
-            if (isDebugMode)
-            {
-                command = new FactCommand(method);
-            }
-            else
-            {
-                command = new SkipCommand(method, "DebugSkipped_" + method.Name, "Only available in debug mode!");
-            }
-
-            yield return command;
-        }
     }
 }

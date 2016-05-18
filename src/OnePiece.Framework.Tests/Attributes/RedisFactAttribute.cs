@@ -6,28 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
+using Xunit.Abstractions;
 using Xunit.Sdk;
 
 namespace OnePiece.Framework.Tests.Attributes
 {
+    [XunitTestCaseDiscoverer("OnePiece.Framework.Tests.XunitExtensions.SkippableFactDiscoverer", "OnePiece.Framework.Tests")]
     public class RedisFactAttribute : FactAttribute
     {
-        protected override IEnumerable<ITestCommand> EnumerateTestCommands(IMethodInfo method)
-        {
-            var command = default(ITestCommand);
-
-            if (SingletonBase<RedisMonitor>.Instance.IsAvailable)
-            {
-                command = new FactCommand(method);
-            }
-            else
-            {
-                command = new SkipCommand(method, "RedisSkipped_" + method.Name, "Redis server is unavailable!");
-            }
-
-            yield return command;
-        }
-
         internal class RedisMonitor : SingletonBase<RedisMonitor>
         {
             public DateTime? NextCheckPoint { get; set; }
