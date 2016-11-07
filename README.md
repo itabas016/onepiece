@@ -1,6 +1,8 @@
 ONE PIECE FRAMEWORK 
 ===============
 
+[![Build Status](https://travis-ci.org/itabas016/onepiece.svg?branch=master)](https://travis-ci.org/itabas016/onepiece) [![Build status](https://ci.appveyor.com/api/projects/status/xidvl2f2i6m0fu4d?svg=true)](https://ci.appveyor.com/project/itabas016/onepiece)
+
 This is framework used anime ONE PIECE as the framework namespace. 
 It is about an self .net libraries which collected in a long period time in the work.
 If used deeply, will worked efficiency, take everything easy, to be a literary coder!

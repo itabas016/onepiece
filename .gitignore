@@ -44,6 +44,7 @@ x64/
 *.psess
 *.vsp
 *.vspx
+.vs/
 
 # Guidance Automation Toolkit
 *.gpState
