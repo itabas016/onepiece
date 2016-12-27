@@ -22,7 +22,7 @@ namespace SubSonic.Oracle.DataProviders.SQLite
         {
             string qualifiedTable;
 
-            qualifiedTable = qualifiedTable = String.Format("`{0}`", table.Name);
+            qualifiedTable = qualifiedTable = String.Format("``{0}``", table.Name);
 
 
             return qualifiedTable;
@@ -31,7 +31,7 @@ namespace SubSonic.Oracle.DataProviders.SQLite
         public override string QualifyColumnName(IColumn column)
         {
             string qualifiedFormat;
-            qualifiedFormat = "`{2}`";
+            qualifiedFormat = "``{2}``";
             return String.Format(qualifiedFormat, column.Table.SchemaName, column.Table.Name, column.Name);
         }
 

@@ -25,13 +25,13 @@ namespace SubSonic.Oracle.DataProviders.MySQL
     {
         public MySqlSchema()
         {
-            ADD_COLUMN = @"ALTER TABLE `{0}` ADD `{1}`{2};";
-            ALTER_COLUMN = @"ALTER TABLE `{0}` MODIFY `{1}`{2};";
-            CREATE_TABLE = "CREATE TABLE `{0}` ({1} \r\n) ";
-            DROP_COLUMN = @"ALTER TABLE `{0}` DROP COLUMN `{1}`;";
-            DROP_TABLE = @"DROP TABLE `{0}`;";
+            ADD_COLUMN = @"ALTER TABLE ``{0}`` ADD ``{1}``{2};";
+            ALTER_COLUMN = @"ALTER TABLE ``{0}`` MODIFY ``{1}``{2};";
+            CREATE_TABLE = "CREATE TABLE ``{0}`` ({1} \r\n) ";
+            DROP_COLUMN = @"ALTER TABLE ``{0}`` DROP COLUMN ``{1}``;";
+            DROP_TABLE = @"DROP TABLE ``{0}``;";
 
-            UPDATE_DEFAULTS = @"UPDATE `{0}` SET `{1}`={2};";
+            UPDATE_DEFAULTS = @"UPDATE ``{0}`` SET ``{1}``={2};";
 
             ClientName = "MySql.Data.MySqlClient";
         }
@@ -99,7 +99,7 @@ namespace SubSonic.Oracle.DataProviders.MySQL
             StringBuilder createSql = new StringBuilder();
 
             foreach (IColumn col in table.Columns)
-                createSql.AppendFormat("\r\n  `{0}`{1},", col.Name, GenerateColumnAttributes(col));
+                createSql.AppendFormat("\r\n  ``{0}``{1},", col.Name, GenerateColumnAttributes(col));
             string columnSql = createSql.ToString();
             return columnSql.Chop(",");
         }

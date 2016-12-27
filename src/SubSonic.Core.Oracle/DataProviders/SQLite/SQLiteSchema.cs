@@ -25,15 +25,15 @@ namespace SubSonic.Oracle.DataProviders.SQLite
     {
         public SQLiteSchema()
         {
-            ADD_COLUMN = @"ALTER TABLE `{0}` ADD `{1}`{2};";
+            ADD_COLUMN = @"ALTER TABLE ``{0}`` ADD ``{1}``{2};";
             //can't do this
             ALTER_COLUMN = @"";
-            CREATE_TABLE = "CREATE TABLE `{0}` ({1} \r\n);";
+            CREATE_TABLE = "CREATE TABLE ``{0}`` ({1} \r\n);";
             //can't do this
             DROP_COLUMN = @"";
-            DROP_TABLE = @"DROP TABLE `{0}`;";
+            DROP_TABLE = @"DROP TABLE ``{0}``;";
 
-            UPDATE_DEFAULTS = @"UPDATE `{0}` SET `{1}`={2};";
+            UPDATE_DEFAULTS = @"UPDATE ``{0}`` SET ``{1}``={2};";
 
             ClientName = "System.Data.SQLite";
         }

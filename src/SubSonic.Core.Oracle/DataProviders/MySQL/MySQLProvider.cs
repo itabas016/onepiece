@@ -20,14 +20,14 @@ namespace SubSonic.Oracle.DataProviders.MySQL
 
         public override string QualifyTableName(ITable table)
         {
-            return String.Format("`{0}`", table.Name);
+            return String.Format("``{0}``", table.Name);
         }
 
         public override string QualifyColumnName(IColumn column)
         {
             string qualifiedFormat;
 
-            qualifiedFormat = String.IsNullOrEmpty(column.SchemaName) ? "`{2}`" : "`{0}`.`{1}`.`{2}`";
+            qualifiedFormat = String.IsNullOrEmpty(column.SchemaName) ? "``{2}``" : "``{0}``.``{1}``.``{2}``";
         
             return String.Format(qualifiedFormat, column.Table.SchemaName, column.Table.Name, column.Name);
         }
