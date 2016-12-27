@@ -7,6 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper.Mappers;
 
 namespace OnePiece.Framework.Core
 {
@@ -37,7 +38,9 @@ namespace OnePiece.Framework.Core
 
         public static void ResetMapper()
         {
-            Mapper.Reset();
+            //upgrade v5.0 this method is obsolete
+            //Mapper.Reset();
+            MapperRegistry.Reset();
         }
 
         public static T2 Auto<T1, T2>(T1 source, T2 defaultT2Value = default(T2))

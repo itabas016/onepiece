@@ -32,7 +32,7 @@ namespace OnePiece.Framework.Core
         {
             var sourceType = typeof(TSource);
             var destinationType = typeof(TDestination);
-            var existingMaps = Mapper.GetAllTypeMaps().First(x => x.SourceType.Equals(sourceType) && x.DestinationType.Equals(destinationType));
+            var existingMaps = Mapper.Configuration.GetAllTypeMaps().First(x => x.SourceType.Equals(sourceType) && x.DestinationType.Equals(destinationType));
             foreach (var property in existingMaps.GetUnmappedPropertyNames())
             {
                 expression.ForMember(property, opt => opt.Ignore());
