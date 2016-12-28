@@ -121,8 +121,8 @@
     <Compile Include="DataProviders\Oracle\OracleLanguage.cs" />
     <Compile Include="DataProviders\Oracle\OraclePartition.cs" />
     <Compile Include="DataProviders\Oracle\OracleSchema.cs" />
-    <Compile Include="DataProviders\SqlServer\SqlServerProvider.cs" />
     <Compile Include="DataProviders\SQLite\SQLiteProvider.cs" />
+    <Compile Include="DataProviders\SqlServer\SqlServerProvider.cs" />
     <Compile Include="Extensions\ExpressionExtensions.cs" />
     <Compile Include="Extensions\IQueryableExtenstions.cs" />
     <Compile Include="Linq\Translation\CountOrderByRemover.cs" />

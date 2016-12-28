@@ -16,19 +16,19 @@ namespace SubSonic.Oracle.DataProviders.MySQL
         public override string InsertionIdentityFetchString { get { return String.Empty; } }
 
         public MySqlProvider(string connectionString, string providerName) : base(connectionString, providerName)
-        {}
+        { }
 
         public override string QualifyTableName(ITable table)
         {
-            return String.Format("``{0}``", table.Name);
+            return String.Format("`{0}`", table.Name);
         }
 
         public override string QualifyColumnName(IColumn column)
         {
             string qualifiedFormat;
 
-            qualifiedFormat = String.IsNullOrEmpty(column.SchemaName) ? "``{2}``" : "``{0}``.``{1}``.``{2}``";
-        
+            qualifiedFormat = String.IsNullOrEmpty(column.SchemaName) ? "`{2}`" : "`{0}`.`{1}`.`{2}`";
+
             return String.Format(qualifiedFormat, column.Table.SchemaName, column.Table.Name, column.Name);
         }
 
@@ -44,7 +44,7 @@ namespace SubSonic.Oracle.DataProviders.MySQL
 
         public override IQueryLanguage QueryLanguage { get { return new MySqlLanguage(this); } }
 
-           #region Shared connection and transaction handling
+        #region Shared connection and transaction handling
 
         [ThreadStatic]
         private static DbConnection __sharedConnection;
